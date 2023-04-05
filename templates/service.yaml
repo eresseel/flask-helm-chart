@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-example-svc
+  name: {{ include "flask.fullname" . }}
 spec:
   type: {{ .Values.service.type }}
   ports:
