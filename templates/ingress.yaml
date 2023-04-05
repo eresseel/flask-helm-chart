@@ -16,7 +16,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: flask-example-svc
+                name: {{ include "flask.fullname" . }}
                 port:
                   number: 8080
 {{- end }}
